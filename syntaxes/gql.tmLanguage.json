@@ -1,0 +1,139 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Graql",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#string-double-quoted"
+		},	
+		{
+			"include": "#string-single-quoted"
+		},	
+		{
+			"include": "#escaped-char"
+		},	
+		{
+			"include": "#comments"
+		},	
+		{
+			"include": "#variables"
+		},
+		{
+			"name": "storage.type.gql",
+			"match": "\\b(string|long|double|boolean|date)\\b"
+		},			
+		{
+			"name": "storage.type.gql",
+			"match": "\\b(entity|role|relationship|attribute|rule)\\b"
+		},
+		{
+			"name": "entity.name.class.gql",
+			"match": "[a-zA-Z_][-\\w]*"
+		},
+		{
+			"name": "constant.numeric.gql",
+			"match": "[-+]?\\d+(\\.\\d+)?"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.gql",
+					"match": "\\b(if|then|for|else)\\b"
+				},
+				{
+					"name": "keyword.other.gql",
+					"match": "\\b(define|undefine|match|get|aggregate|insert|delete|isa|sub|plays|involves|relates|has|datatype|is-abstract|val|id|of|limit|offset|order by|compute|(?!.*-)in|std|median|mean|max|min|sum|count|degree|path|cluster|when|then)\\b"
+				},
+				{
+					"name": "keyword.operator.gql",
+					"match": ">=|<=|>|<|>>|<<|\\b(contains|regex)\\b"
+				},
+				{
+					"match": "(-[a-z_\\x{7f}-\\x{ff}][a-z0-9_\\x{7f}-\\x{ff}])+",
+					"name": "invalid.illegal.gql"
+				}
+			]	
+		},
+		"variables": {			
+			"patterns": [
+				{
+					"match": "(?i)(\\$+)[a-z_\\x{7f}-\\x{ff}][a-z0-9_\\x{7f}-\\x{ff}]*\\b",
+					"name": "variable.other.gql",
+					"captures": {
+						"2":{"name": "punctuation.definition.variable.gql"}
+					}
+				},
+				{
+					"match": "(-[a-z_\\x{7f}-\\x{ff}][a-z0-9_\\x{7f}-\\x{ff}])+",
+					"name": "invalid.illegal.gql"
+				}
+			]
+		},
+		"string-double-quoted": {
+			"begin": "\"",
+			"beginCaptures": [
+				{
+					"name": "punctuation.definition.string.begin.gql"
+				}
+			],
+			"end": "\"",
+			"endCaptures": [
+				{
+					"name": "punctuation.definition.string.end.gql"
+				}
+			],
+			"name": "string.quoted.double.gql",
+			"patterns": [
+				{
+					"include": "#escaped-char"
+				}
+			]
+		},
+		"string-single-quoted": {
+			"begin": "'",
+			"beginCaptures": [
+				{
+					"name": "punctuation.definition.string.begin.gql"
+				}
+			],
+			"end": "'",
+			"endCaptures": [
+				{
+					"name": "punctuation.definition.string.end.gql"
+				}
+			],
+			"name": "string.quoted.single.gql",
+			"patterns": [
+				{
+					"include": "#escaped-char"
+				}
+			]
+		},
+		"escaped-char" : {
+			"name": "constant.character.escape.gql",
+			"patterns": [
+				{
+					"match": "\\\\(x\\h{2}|n|r|t|0|\"|''|\\\\|u\\{\\h{1,6}\\})"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"match": "(#).+",
+					"captures": {
+						"0": {
+							"name": "punctuation.definition.variable.gql"
+						}
+					},
+					"name":"comment.line.gql"
+				}
+			]
+		}
+	},
+	"scopeName": "source.gql"
+}
