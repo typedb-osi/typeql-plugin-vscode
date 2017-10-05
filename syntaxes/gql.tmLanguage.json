@@ -19,15 +19,15 @@
 		},	
 		{
 			"include": "#variables"
+		},			
+		{
+			"name": "meta.interface.gql",
+			"match": "\\b(entity|role|relation|attribute|rule|inference-rule)\\b",
+			"comment": "Considereing that those keyword need/can be implemented... thus interface?"
 		},
 		{
 			"name": "storage.type.gql",
 			"match": "\\b(string|long|double|boolean|date)\\b"
-		},			
-		{
-			"name": "meta.interface.gql",
-			"match": "\\b(entity|role|relationship|attribute|rule)\\b",
-			"comment": "Considereing that those keyword need to be implemented... thus interface?"
 		},
 		{
 			"name": "entity.name.class.gql",

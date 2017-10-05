@@ -2,7 +2,7 @@
     "name": "gql",
     "displayName": "Graql Syntax",
     "description": "Graql syntax highlighter",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "icon": "logo.png",
     "publisher": "idealley",
     "author": {
@@ -10,8 +10,8 @@
         "email": "samuelpouyt@gmail.com"
     },
     "repository": {
-		"type": "git",
-		"url": "https://github.com/idealley/graql-language-vscode"
+        "type": "git",
+        "url": "https://github.com/idealley/graql-language-vscode"
     },
     "license": "MIT",
     "engines": {
@@ -21,21 +21,30 @@
         "Languages"
     ],
     "keywords": [
-		"gql",
-		"graql",
-		"grakn"
-	],
+        "gql",
+        "graql",
+        "grakn"
+    ],
     "contributes": {
-        "languages": [{
-            "id": "gql",
-            "aliases": ["Graql", "gql"],
-            "extensions": [".gql"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "gql",
-            "scopeName": "source.gql",
-            "path": "./syntaxes/gql.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "gql",
+                "aliases": [
+                    "Graql",
+                    "gql"
+                ],
+                "extensions": [
+                    ".gql"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "gql",
+                "scopeName": "source.gql",
+                "path": "./syntaxes/gql.tmLanguage.json"
+            }
+        ]
     }
 }
