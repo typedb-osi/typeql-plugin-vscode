@@ -27,7 +27,7 @@
 		},
 		{
 			"name": "storage.type.gql",
-			"match": "\\b(string|long|double|boolean|date)\\b"
+			"match": "\\b(datatype|string|long|double|boolean|date|true|false)\\b"
 		},
 		{
 			"name": "entity.name.class.gql",
@@ -43,15 +43,15 @@
 			"patterns": [
 				{
 					"name": "keyword.control.gql",
-					"match": "\\b(if|then|for|else)\\b"
+					"match": "\\b(if|then|for|else|elseif|do|for|then|when)\\b"
 				},
 				{
 					"name": "keyword.other.gql",
-					"match": "\\b(define|undefine|match|get|aggregate|insert|delete|isa|sub|plays|involves|relates|has|datatype|is-abstract|val|id|of|limit|offset|order by|compute|(?!.*-)in|std|median|mean|max|min|sum|count|degree|path|cluster|when|then)\\b"
+					"match": "\\b(ask|define|key|from|undefine|match|get|aggregate|insert|label|isa|sub|plays|involves|relates|has|has-scope|datatype|is-abstract|group|val|id|of|order|by|to|compute|(?!.*-)in|id|std|median|mean|max|min|sum|count|degree|path|cluster)\\b"
 				},
 				{
 					"name": "keyword.operator.gql",
-					"match": ">=|<=|>|<|>>|<<|\\b(contains|regex)\\b"
+					"match": ">=|<=|>|<|>>|<<|\\b(contains|regex|asc|desc|and|delete|distinct|limit|offset|select|noescp|not|null)\\b"
 				},
 				{
 					"match": "(-[a-z_\\x{7f}-\\x{ff}][a-z0-9_\\x{7f}-\\x{ff}])+",
