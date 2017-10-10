@@ -47,7 +47,7 @@
 				},
 				{
 					"name": "keyword.other.gql",
-					"match": "\\b(ask|define|key|from|undefine|match|get|aggregate|insert|label|isa|sub|plays|involves|relates|has|has-scope|datatype|is-abstract|group|val|id|of|order|by|to|compute|(?!.*-)in|id|std|median|mean|max|min|sum|count|degree|path|cluster)\\b"
+					"match": "\\b(?!.*-.\\s)(ask|define|key|from|undefine|match|get|aggregate|insert|label|isa|sub|plays|involves|relates|has|has-scope|datatype|is-abstract|group|val|id|of|order|by|to|compute|in|id|std|median|mean|max|min|sum|count|degree|path|cluster)\\b"
 				},
 				{
 					"name": "keyword.operator.gql",
