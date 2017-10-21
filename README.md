@@ -1,4 +1,4 @@
-# GraQL
+# Graql
 Syntax highliter for graql
 
 ## Features

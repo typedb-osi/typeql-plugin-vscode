@@ -2,7 +2,7 @@
     "name": "gql",
     "displayName": "Graql Syntax",
     "description": "Graql syntax highlighter",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "icon": "logo.png",
     "publisher": "idealley",
     "author": {
