@@ -1,7 +1,6 @@
 # Change Log
 All notable changes to the "gql" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-- Initial release
+## [v0.2.2]
+### Added
+- new keywords for GRAKN 0.17
