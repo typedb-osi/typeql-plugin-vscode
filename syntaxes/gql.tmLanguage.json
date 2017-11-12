@@ -22,7 +22,7 @@
 		},			
 		{
 			"name": "meta.interface.gql",
-			"match": "\\b(entity|role|relation|attribute|rule|inference-rule)\\b",
+			"match": "\\b(entity|role|relation|relationship|attribute|rule|inference-rule)\\b",
 			"comment": "Considereing that those keyword need/can be implemented... thus interface?"
 		},
 		{
