@@ -1,5 +1,5 @@
-# Graql
-Syntax highliter for graql
+# TypeQL
+Syntax highliter for TypeQL
 
 ## Features
 Highlight:

@@ -1,7 +1,7 @@
 {
-    "name": "gql",
-    "displayName": "Graql Syntax",
-    "description": "Graql syntax highlighter",
+    "name": "tql",
+    "displayName": "TypeQL Syntax",
+    "description": "TypeQL Syntax Highlighter",
     "version": "0.2.2",
     "icon": "logo.png",
     "publisher": "idealley",
@@ -15,18 +15,32 @@
     },
     "license": "MIT",
     "engines": {
-        "vscode": "^1.16.0"
+        "vscode": "^1.56.0"
     },
     "categories": [
         "Languages"
     ],
     "keywords": [
+        "tql",
+        "typeql",
+        "typedb",
         "gql",
         "graql",
         "grakn"
     ],
     "contributes": {
         "languages": [
+            {
+                "id": "tql",
+                "aliases": [
+                    "TypeDB",
+                    "tql"
+                ],
+                "extensions": [
+                    ".tql"
+                ],
+                "configuration": "./language-configuration.json"
+            },
             {
                 "id": "gql",
                 "aliases": [
@@ -40,6 +54,11 @@
             }
         ],
         "grammars": [
+            {
+                "language": "tql",
+                "scopeName": "source.tql",
+                "path": "./syntaxes/tql.tmLanguage.json"
+            },
             {
                 "language": "gql",
                 "scopeName": "source.gql",

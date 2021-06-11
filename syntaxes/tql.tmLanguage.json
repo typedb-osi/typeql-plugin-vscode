@@ -1,0 +1,148 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "TypeQL",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#string-double-quoted"
+		},	
+		{
+			"include": "#string-single-quoted"
+		},	
+		{
+			"include": "#escaped-char"
+		},	
+		{
+			"include": "#comments"
+		},	
+		{
+			"include": "#variables"
+		},			
+		{
+			"name": "meta.type.tql",
+			"match": "\\b(thing|entity|attribute|relation|role)\\b"
+		},
+		{
+			"name": "storage.type.tql",
+			"match": "\\b(string|long|double|boolean|datetime|true|false)\\b"
+		},
+		{
+			"name": "entity.name.class.tql",
+			"match": "[a-zA-Z_][-\\w]*"
+		},
+		{
+			"name": "constant.numeric.tql",
+			"match": "[-+]?\\d+(\\.\\d+)?"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [			
+				{
+					"name": "entity.name.type",
+					"match": "\\b(thing|entity|attribute|relation|role)\\b"
+				},
+				{
+					"name": "keyword.control.tql",
+					"match": "\\b(when|then)\\b"
+				},
+				{
+					"name": "keyword.other.tql",
+					"match": "\\b(?!.*-.\\s)(define|undefine|match|get|insert|delete|offset|limit|group|sort|asc|desc|sub|abstract|as|iid|type|isa|isa!|sub|sub!|owns|has|plays|relates|value|regex|rule|when|then)\\b"
+				},
+				{
+					"name": "keyword.operator.tql",
+					"match": ">=|<=|>|<"
+				},
+				{
+					"name": "keyword.operator.word.tql",
+					"match": "\\b(or|not|like|is)\\b"
+				},
+				{
+					"name": "punctuation.separator.tql",
+					"match": ":"
+				},
+				{
+					"name": "punctuation.terminator.tql",
+					"match": ";"
+				}
+			]	
+		},
+		"variables": {			
+			"patterns": [
+				{
+					"name": "variable.parameter.tql",
+					"match": "\\b(\\$[a-zA-Z0-9_\\-]+)\\b"
+				},
+				{
+					"match": "(-[a-z_\\x{7f}-\\x{ff}][a-z0-9_\\x{7f}-\\x{ff}])+",
+					"name": "invalid.illegal.tql"
+				}
+			]
+		},
+		"string-double-quoted": {
+			"begin": "\"",
+			"beginCaptures": [
+				{
+					"name": "punctuation.definition.string.begin.tql"
+				}
+			],
+			"end": "\"",
+			"endCaptures": [
+				{
+					"name": "punctuation.definition.string.end.tql"
+				}
+			],
+			"name": "string.quoted.double.tql",
+			"patterns": [
+				{
+					"include": "#escaped-char"
+				}
+			]
+		},
+		"string-single-quoted": {
+			"begin": "'",
+			"beginCaptures": [
+				{
+					"name": "punctuation.definition.string.begin.tql"
+				}
+			],
+			"end": "'",
+			"endCaptures": [
+				{
+					"name": "punctuation.definition.string.end.tql"
+				}
+			],
+			"name": "string.quoted.single.tql",
+			"patterns": [
+				{
+					"include": "#escaped-char"
+				}
+			]
+		},
+		"escaped-char" : {
+			"name": "constant.character.escape.tql",
+			"patterns": [
+				{
+					"match": "\\\\(x\\h{2}|n|r|t|0|\"|''|\\\\|u\\{\\h{1,6}\\})"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"match": "(#).+",
+					"captures": {
+						"0": {
+							"name": "punctuation.definition.variable.tql"
+						}
+					},
+					"name":"comment.line.tql"
+				}
+			]
+		}
+	},
+	"scopeName": "source.tql"
+}
