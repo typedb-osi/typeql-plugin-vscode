@@ -30,7 +30,7 @@
             {
                 "id": "tql",
                 "aliases": [
-                    "TypeDB",
+                    "TypeQL",
                     "tql"
                 ],
                 "extensions": [

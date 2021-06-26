@@ -1,5 +1,5 @@
 # TypeQL
-Syntax highliter for TypeQL
+Syntax highlighter for TypeQL
 
 ## Features
 Highlight:
