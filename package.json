@@ -1,17 +1,17 @@
 {
-    "name": "tql",
+    "name": "typeql",
     "displayName": "TypeQL Syntax",
     "description": "TypeQL Syntax Highlighter",
-    "version": "0.3.0",
+    "version": "0.3.2",
     "icon": "logo.png",
-    "publisher": "idealley",
+    "publisher": "vaticle",
     "author": {
-        "name": "Samuel Pouyt",
-        "email": "samuelpouyt@gmail.com"
+        "name": "Paul Bergmann",
+        "email": "paulb@foresightlogic.com"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/idealley/graql-language-vscode"
+        "url": "https://github.com/typedb-osi/typeql-plugin-vscode"
     },
     "license": "MIT",
     "engines": {
