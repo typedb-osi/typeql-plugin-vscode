@@ -25,11 +25,11 @@
 		},			
 		{
 			"name": "meta.type.tql",
-			"match": "\\b(thing|entity|attribute|relation|role)\\b"
+			"match": "\\b(thing|entity|attribute|relation|role)(?!-)\\b"
 		},
 		{
 			"name": "storage.type.tql",
-			"match": "\\b(string|long|double|boolean|datetime|true|false)\\b"
+			"match": "\\b(string|long|double|boolean|datetime|true|false)(?!-)\\b"
 		},
 		{
 			"name": "entity.name.class.tql",
@@ -45,15 +45,15 @@
 			"patterns": [			
 				{
 					"name": "entity.name.type",
-					"match": "\\b(thing|entity|attribute|relation|role)\\b"
+					"match": "\\b(thing|entity|attribute|relation|role)(?!-)\\b"
 				},
 				{
 					"name": "keyword.control.tql",
-					"match": "\\b(when|then)\\b"
+					"match": "\\b(when|then)(?!-)\\b"
 				},
 				{
 					"name": "keyword.other.tql",
-					"match": "\\b(?!.*-.\\s)(define|undefine|match|get|insert|delete|offset|limit|group|sort|asc|desc|sub|abstract|as|iid|type|isa|isa!|sub|sub!|owns|has|plays|relates|value|regex|rule|when|then)\\b"
+					"match": "\\b(?!.*-.\\s)(define|undefine|match|get|insert|delete|offset|limit|group|sort|asc|desc|sub|abstract|as|iid|type|isa|isa!|sub|sub!|owns|has|plays|relates|value|regex|rule|when|then)(?!-)\\b"
 				},
 				{
 					"name": "keyword.operator.tql",
@@ -61,7 +61,7 @@
 				},
 				{
 					"name": "keyword.operator.word.tql",
-					"match": "\\b(or|not|like|is)\\b"
+					"match": "\\b(or|not|like|is) \\b"
 				},
 				{
 					"name": "punctuation.separator.tql",
