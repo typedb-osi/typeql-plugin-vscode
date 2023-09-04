@@ -48,6 +48,20 @@
                             "fontStyle": "italic"
                         }
                     },
+
+                    {
+                        "scope": "keyword.operator.words.tql",
+                        "settings": {
+                            "foreground": "#ff7abd"
+                        }
+                    },
+            
+                    {
+                        "scope": "keyword.operator.characters.tql",
+                        "settings": {
+                            "foreground": "#ff7abd"
+                        }
+                    },
             
                     {
                         "scope": "storage.type.tql",
@@ -67,20 +81,6 @@
             
                     {
                         "scope": "keyword.control.tql",
-                        "settings": {
-                            "foreground": "#ff7abd"
-                        }
-                    },
-            
-                    {
-                        "scope": "keyword.operator.words.tql",
-                        "settings": {
-                            "foreground": "#ff7abd"
-                        }
-                    },
-            
-                    {
-                        "scope": "keyword.operator.characters.tql",
                         "settings": {
                             "foreground": "#ff7abd"
                         }

@@ -1,6 +1,8 @@
 # TypeQL
 Syntax highlighter for TypeQL
 
+![Screenshot](./screenshot.jpg)
+
 ## Features
 Highlight:
 - variables

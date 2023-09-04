@@ -54,7 +54,7 @@
 				},
 				{
 					"name": "keyword.operator.words.tql",
-					"match": "\\b(or|not|like|is|contains) \\b"
+					"match": "(or|not|like|is|contains)"
 				},
 				{
 					"name": "keyword.operator.characters.tql",
