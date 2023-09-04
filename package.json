@@ -38,114 +38,113 @@
           "path": "./syntaxes/tql.tmLanguage.json"
         }],
         "configurationDefaults": {
-          "editor.insertSpaces": false,
-          "editor.tokenColorCustomizations": {
-            "textMateRules": [
-              {
-                "scope": "comments.tql",
-                "settings": {
-                    "foreground": "#4dc97c",
-                    "fontStyle": "italic"
-                }
-            },
-    
-            {
-                "scope": "storage.type.tql",
-                "settings": {
-                    "foreground": "#55EAE2",
-                    "fontStyle": "italic"
-                }
-            },
-    
-            {
-                "scope": "storage.modifier.tql",
-                "settings": {
-                    "foreground": "#82b6ff",
-                    "fontStyle": "italic"
-                }
-            },
-    
-            {
-                "scope": "keyword.control.tql",
-                "settings": {
-                    "foreground": "#ff7abd"
-                }
-            },
-    
-            {
-                "scope": "keyword.operator.words.tql",
-                "settings": {
-                    "foreground": "#ff7abd"
-                }
-            },
-    
-            {
-                "scope": "keyword.operator.characters.tql",
-                "settings": {
-                    "foreground": "#ff7abd"
-                }
-            },
-    
-            {
-                "scope": "keyword.annotations.tql",
-                "settings": {
-                    "foreground": "#FFA187"
-                }
-            },
-    
-            {
-                "scope": "support.function.tql",
-                "settings": {
-                    "foreground": "#ff7abd",
-                    "fontStyle": "italic"
-                }
-            },
-    
-            {
-                "scope": "string.tql",
-                "settings": {
-                    "foreground": "#FFE4A7"
-                }
-            },
-    
-            {
-                "scope": "constant.character.escape.tql",
-                "settings": {
-                    "foreground": "#FFA187"
-                }
-            },
-    
-            {
-                "scope": "constant.language.tql",
-                "settings": {
-                    "foreground": "#FFA187"
-                }
-            },
-    
-            {
-                "scope": "constant.numeric.tql",
-                "settings": {
-                    "foreground": "#82b6ff"
-                }
-            },
-    
-            {
-                "scope": "variable.parameter.tql",
-                "settings": {
-                    "foreground": "#55EAE2",
-                    "fontStyle": "italic"
-                }
-            },
-    
-            {
-                "scope": "invalid.illegal.tql",
-                "settings": {
-                    "foreground": "#ff8080"
-                }
+            "editor.insertSpaces": false,
+            "editor.tokenColorCustomizations": {
+                "textMateRules": [
+                    {
+                        "scope": "comments.tql",
+                        "settings": {
+                            "foreground": "#4dc97c",
+                            "fontStyle": "italic"
+                        }
+                    },
+            
+                    {
+                        "scope": "storage.type.tql",
+                        "settings": {
+                            "foreground": "#55EAE2",
+                            "fontStyle": "italic"
+                        }
+                    },
+            
+                    {
+                        "scope": "storage.modifier.tql",
+                        "settings": {
+                            "foreground": "#82b6ff",
+                            "fontStyle": "italic"
+                        }
+                    },
+            
+                    {
+                        "scope": "keyword.control.tql",
+                        "settings": {
+                            "foreground": "#ff7abd"
+                        }
+                    },
+            
+                    {
+                        "scope": "keyword.operator.words.tql",
+                        "settings": {
+                            "foreground": "#ff7abd"
+                        }
+                    },
+            
+                    {
+                        "scope": "keyword.operator.characters.tql",
+                        "settings": {
+                            "foreground": "#ff7abd"
+                        }
+                    },
+            
+                    {
+                        "scope": "keyword.annotations.tql",
+                        "settings": {
+                            "foreground": "#FFA187"
+                        }
+                    },
+            
+                    {
+                        "scope": "support.function.tql",
+                        "settings": {
+                            "foreground": "#ff7abd",
+                            "fontStyle": "italic"
+                        }
+                    },
+            
+                    {
+                        "scope": "string.tql",
+                        "settings": {
+                            "foreground": "#FFE4A7"
+                        }
+                    },
+            
+                    {
+                        "scope": "constant.character.escape.tql",
+                        "settings": {
+                            "foreground": "#FFA187"
+                        }
+                    },
+            
+                    {
+                        "scope": "constant.language.tql",
+                        "settings": {
+                            "foreground": "#FFA187"
+                        }
+                    },
+            
+                    {
+                        "scope": "constant.numeric.tql",
+                        "settings": {
+                            "foreground": "#82b6ff"
+                        }
+                    },
+            
+                    {
+                        "scope": "variable.parameter.tql",
+                        "settings": {
+                            "foreground": "#55EAE2",
+                            "fontStyle": "italic"
+                        }
+                    },
+            
+                    {
+                        "scope": "invalid.illegal.tql",
+                        "settings": {
+                            "foreground": "#ff8080"
+                        }
+                    }
+                ]
             }
-            ]
-          }
         }
-      }
     }
-    
+}
