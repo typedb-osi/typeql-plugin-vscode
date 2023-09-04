@@ -2,11 +2,11 @@
     "name": "typeql",
     "displayName": "TypeQL Syntax",
     "description": "TypeQL Syntax Highlighter",
-    "version": "0.3.2",
+    "version": "0.4.0",
     "icon": "logo.png",
     "publisher": "vaticle",
     "author": {
-        "name": "Paul Bergmann",
+        "name": "Paul Bergmann, Yash Bhagwat",
         "email": "paulb@foresightlogic.com"
     },
     "repository": {
@@ -15,10 +15,10 @@
     },
     "license": "MIT",
     "engines": {
-        "vscode": "^1.56.2"
+        "vscode": "^1.81.0"
     },
     "categories": [
-        "Languages"
+        "Programming Languages"
     ],
     "keywords": [
         "tql",
@@ -26,25 +26,126 @@
         "typedb"
     ],
     "contributes": {
-        "languages": [
+        "languages": [{
+          "id": "tql",
+          "aliases": ["TypeQL", "tql"],
+          "extensions": [".tql"],
+          "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+          "language": "tql",
+          "scopeName": "source.tql",
+          "path": "./syntaxes/tql.tmLanguage.json"
+        }],
+        "configurationDefaults": {
+          "editor.insertSpaces": false,
+          "editor.tokenColorCustomizations": {
+            "textMateRules": [
+              {
+                "scope": "comments.tql",
+                "settings": {
+                    "foreground": "#4dc97c",
+                    "fontStyle": "italic"
+                }
+            },
+    
             {
-                "id": "tql",
-                "aliases": [
-                    "TypeQL",
-                    "tql"
-                ],
-                "extensions": [
-                    ".tql"
-                ],
-                "configuration": "./language-configuration.json"
-            }
-        ],
-        "grammars": [
+                "scope": "storage.type.tql",
+                "settings": {
+                    "foreground": "#55EAE2",
+                    "fontStyle": "italic"
+                }
+            },
+    
             {
-                "language": "tql",
-                "scopeName": "source.tql",
-                "path": "./syntaxes/tql.tmLanguage.json"
+                "scope": "storage.modifier.tql",
+                "settings": {
+                    "foreground": "#82b6ff",
+                    "fontStyle": "italic"
+                }
+            },
+    
+            {
+                "scope": "keyword.control.tql",
+                "settings": {
+                    "foreground": "#ff7abd"
+                }
+            },
+    
+            {
+                "scope": "keyword.operator.words.tql",
+                "settings": {
+                    "foreground": "#ff7abd"
+                }
+            },
+    
+            {
+                "scope": "keyword.operator.characters.tql",
+                "settings": {
+                    "foreground": "#ff7abd"
+                }
+            },
+    
+            {
+                "scope": "keyword.annotations.tql",
+                "settings": {
+                    "foreground": "#FFA187"
+                }
+            },
+    
+            {
+                "scope": "support.function.tql",
+                "settings": {
+                    "foreground": "#ff7abd",
+                    "fontStyle": "italic"
+                }
+            },
+    
+            {
+                "scope": "string.tql",
+                "settings": {
+                    "foreground": "#FFE4A7"
+                }
+            },
+    
+            {
+                "scope": "constant.character.escape.tql",
+                "settings": {
+                    "foreground": "#FFA187"
+                }
+            },
+    
+            {
+                "scope": "constant.language.tql",
+                "settings": {
+                    "foreground": "#FFA187"
+                }
+            },
+    
+            {
+                "scope": "constant.numeric.tql",
+                "settings": {
+                    "foreground": "#82b6ff"
+                }
+            },
+    
+            {
+                "scope": "variable.parameter.tql",
+                "settings": {
+                    "foreground": "#55EAE2",
+                    "fontStyle": "italic"
+                }
+            },
+    
+            {
+                "scope": "invalid.illegal.tql",
+                "settings": {
+                    "foreground": "#ff8080"
+                }
             }
-        ]
+            ]
+          }
+        }
+      }
     }
-}
+    

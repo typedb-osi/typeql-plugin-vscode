@@ -8,5 +8,5 @@ Highlight:
 - reserved keywords
 
 ## Issues
-report issues on [github](https://github.com/typedb-osi/typeql-plugin-vscode) or [Discord](https://vaticle.com/discord) #typeql-plugin-vscode.
+report issues on [github](https://github.com/typedb-osi/typeql-plugin-vscode) or [Discord](https://vaticle.com/discord) #troubleshooting.
 

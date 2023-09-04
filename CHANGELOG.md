@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to the "gql" extension will be documented in this file.
 
+## [v0.4.0]
+### Changed
+- renamed scope names for keywords to conform with studio naming
+- added annotation keywords
+- modified token colors for the scopes similar to colors used in studio
+
 ## [v0.3.0]
 ### Changed
 - complete rewrite
