@@ -6,7 +6,13 @@
 	],
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#storage"
+		},
+		{
+			"include": "#keyword"
+		},
+		{
+			"include": "#support"
 		},
 		{
 			"include": "#string-double-quoted"
@@ -16,72 +22,55 @@
 		},	
 		{
 			"include": "#escaped-char"
-		},	
-		{
-			"include": "#comments"
-		},	
-		{
-			"include": "#variables"
-		},			
-		{
-			"name": "meta.type.tql",
-			"match": "\\b(thing|entity|attribute|relation|role)(?!-)\\b"
 		},
 		{
-			"name": "storage.type.tql",
-			"match": "\\b(string|long|double|boolean|datetime|true|false)(?!-)\\b"
+			"include": "#constant"
 		},
 		{
-			"name": "entity.name.class.tql",
-			"match": "[a-zA-Z_][-\\w]*"
+			"include": "#variable"
 		},
 		{
-			"name": "constant.numeric.tql",
-			"match": "[-+]?\\d+(\\.\\d+)?"
+			"include": "#comment"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [			
+		"storage": {
+			"patterns": [
 				{
-					"name": "entity.name.type",
+					"name": "storage.type.tql",
 					"match": "\\b(thing|entity|attribute|relation|role)(?!-)\\b"
 				},
 				{
-					"name": "keyword.control.tql",
-					"match": "\\b(when|then)(?!-)\\b"
-				},
+					"name": "storage.modifier.tql",
+					"match": "\\b(string|long|double|boolean|datetime)(?!-)\\b"
+				}
+			]
+		},
+		"keyword": {
+			"patterns": [
 				{
-					"name": "keyword.other.tql",
+					"name": "keyword.control.tql",
 					"match": "\\b(?!.*-.\\s)(define|undefine|match|get|insert|delete|offset|limit|group|sort|asc|desc|sub|abstract|as|iid|type|isa|isa!|sub|sub!|owns|has|plays|relates|value|regex|rule|when|then)(?!-)\\b"
 				},
 				{
-					"name": "keyword.operator.tql",
-					"match": ">=|<=|>|<"
+					"name": "keyword.operator.words.tql",
+					"match": "\\b(or|not|like|is|contains)\\b"
 				},
 				{
-					"name": "keyword.operator.word.tql",
-					"match": "\\b(or|not|like|is) \\b"
+					"name": "keyword.operator.characters.tql",
+					"match": ">=|<=|>|<|==|="
 				},
 				{
-					"name": "punctuation.separator.tql",
-					"match": ":"
-				},
-				{
-					"name": "punctuation.terminator.tql",
-					"match": ";"
+					"name": "keyword.annotations.tql",
+					"match": "(@key|@unique)\\b"
 				}
-			]	
+			]
 		},
-		"variables": {			
+		"support": {
 			"patterns": [
 				{
-					"name": "variable.parameter.tql",
-					"match": "\\b(\\$[a-zA-Z0-9_\\-]+)\\b"
-				},
-				{
-					"match": "(-[a-z_\\x{7f}-\\x{ff}][a-z0-9_\\x{7f}-\\x{ff}])+",
-					"name": "invalid.illegal.tql"
+					"name":"support.function.tql",
+					"match":"\\b(count|sum|max|min|mean|median|std)(?!-)\\b"
 				}
 			]
 		},
@@ -93,17 +82,17 @@
 					"include": "#escaped-char"
 				}
 			],
-			"name": "string.quoted.double.tql"
+			"name": "string.tql"
 		},
 		"string-single-quoted": {
-			"begin": "\"",
-			"end": "\"",
+			"begin": "'",
+			"end": "'",
 			"patterns": [
 				{
 					"include": "#escaped-char"
 				}
 			],
-			"name": "string.quoted.single.tql"
+			"name": "string.tql"
 		},
 		"escaped-char" : {
 			"name": "constant.character.escape.tql",
@@ -113,7 +102,35 @@
 				}
 			]
 		},
-		"comments": {
+		"constant": {
+			"patterns": [
+				{
+					"name":"constant.language.tql",
+					"match":"\\b(true|false)(?!-)\\b"
+				},
+				{
+					"name":"constant.numeric.tql",
+					"match": "[-+]?\\d+(\\.\\d+)?"
+				}
+			]
+		},
+		"variables": {			
+			"patterns": [
+				{
+					"match": "\\$",
+					"captures": {
+						"0": {
+							"name": "variable.dollar.tql"
+						}
+					}
+				},
+				{
+					"match": "(-[a-z_\\x{7f}-\\x{ff}][a-z0-9_\\x{7f}-\\x{ff}])+",
+					"name": "invalid.illegal.tql"
+				}
+			]
+		},
+		"comment": {
 			"patterns": [
 				{
 					"match": "(#).+",
@@ -122,7 +139,7 @@
 							"name": "punctuation.definition.variable.tql"
 						}
 					},
-					"name":"comment.line.tql"
+					"name":"comments.tql"
 				}
 			]
 		}

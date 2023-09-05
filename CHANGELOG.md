@@ -1,5 +1,11 @@
 # Change Log
-All notable changes to the "gql" extension will be documented in this file.
+All notable changes to the "TypeQL Syntax Highlighter" extension will be documented in this file.
+
+## [v0.4.0]
+### Changed
+- renamed scope names for keywords to conform with TypeDB Studio naming
+- added annotation keywords
+- modified token colors for the scopes similar to colors used in TypeDB Studio
 
 ## [v0.3.0]
 ### Changed
