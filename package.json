@@ -4,10 +4,10 @@
     "description": "TypeQL Syntax Highlighter",
     "version": "0.4.0",
     "icon": "logo.png",
-    "publisher": "vaticle",
+    "publisher": "typedb-osi",
     "author": {
         "name": "Paul Bergmann, Yash Bhagwat",
-        "email": "paulb@foresightlogic.com"
+        "email": "community@typedb.com"
     },
     "repository": {
         "type": "git",
