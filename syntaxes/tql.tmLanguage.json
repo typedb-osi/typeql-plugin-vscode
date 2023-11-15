@@ -50,7 +50,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.tql",
-					"match": "\\b(?!.*-.\\s)(define|undefine|match|get|insert|delete|offset|limit|group|sort|asc|desc|sub|abstract|as|iid|type|isa|isa!|sub|sub!|owns|has|plays|relates|value|regex|rule|when|then)(?!-)\\b"
+					"match": "\\b(?!.*-.\\s)(define|undefine|match|get|fetch|insert|delete|offset|limit|group|sort|asc|desc|sub|abstract|as|iid|type|isa|isa!|sub|sub!|owns|has|plays|relates|value|regex|rule|when|then)(?!-)\\b"
 				},
 				{
 					"name": "keyword.operator.words.tql",
