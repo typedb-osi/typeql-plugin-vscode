@@ -2,13 +2,17 @@
     "name": "typeql",
     "displayName": "TypeQL Syntax",
     "description": "TypeQL Syntax Highlighter",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "icon": "logo.png",
     "publisher": "typedb-osi",
     "author": {
-        "name": "Paul Bergmann, Yash Bhagwat",
+        "name": "TypeDB Community",
         "email": "community@typedb.com"
     },
+    "contributors": [
+        "Paul Bergmann",
+        "Yash Bhagwat"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/typedb-osi/typeql-plugin-vscode"
