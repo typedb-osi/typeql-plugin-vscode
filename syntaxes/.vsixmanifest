@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Language="en-US" Id="tql" Version="0.4.0" Publisher="TypeDB OSI"/>
+    <Identity Language="en-US" Id="tql" Version="0.4.1" Publisher="TypeDB OSI"/>
     <DisplayName>TypeQL</DisplayName>
     <Description xml:space="preserve">TypeQL Syntax Highlighter</Description>
     <Tags>tql, typedb, typeql, __ext_tql</Tags>
