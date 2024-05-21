@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to the "TypeQL Syntax Highlighter" extension will be documented in this file.
 
+## [v0.4.1]
+### Changed
+- added region folding markers support
+
 ## [v0.4.0]
 ### Changed
 - renamed scope names for keywords to conform with TypeDB Studio naming

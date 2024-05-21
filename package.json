@@ -1,10 +1,10 @@
 {
     "name": "typeql",
-    "displayName": "TypeQL Syntax",
+    "displayName": "TypeQL",
     "description": "TypeQL Syntax Highlighter",
     "version": "0.4.1",
     "icon": "logo.png",
-    "publisher": "typedb-osi",
+    "publisher": "typedb",
     "author": {
         "name": "TypeDB Community",
         "email": "community@typedb.com"
