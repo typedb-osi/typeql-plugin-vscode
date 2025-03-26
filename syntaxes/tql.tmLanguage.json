@@ -133,13 +133,8 @@
 		"comment": {
 			"patterns": [
 				{
-					"match": "(#).+",
-					"captures": {
-						"0": {
-							"name": "punctuation.definition.variable.tql"
-						}
-					},
-					"name":"comments.tql"
+					"match": "#.*",
+					"name": "comment.tql"
 				}
 			]
 		}

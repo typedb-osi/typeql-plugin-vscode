@@ -46,13 +46,6 @@
             "editor.tokenColorCustomizations": {
                 "textMateRules": [
                     {
-                        "scope": "comments.tql",
-                        "settings": {
-                            "foreground": "#4dc97c",
-                            "fontStyle": "italic"
-                        }
-                    },
-                    {
                         "scope": "keyword.operator.words.tql",
                         "settings": {
                             "foreground": "#ff7abd"
@@ -137,13 +130,6 @@
                 ],
                 "[*Light*]": {
                     "textMateRules": [
-                        {
-                            "scope": "comments.tql",
-                            "settings": {
-                                "foreground": "#2a7c45",
-                                "fontStyle": "italic"
-                            }
-                        },
                         {
                             "scope": "keyword.operator.words.tql",
                             "settings": {
