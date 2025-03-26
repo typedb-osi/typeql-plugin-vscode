@@ -46,27 +46,17 @@
             "editor.tokenColorCustomizations": {
                 "textMateRules": [
                     {
-                        "scope": "comments.tql",
-                        "settings": {
-                            "foreground": "#4dc97c",
-                            "fontStyle": "italic"
-                        }
-                    },
-
-                    {
                         "scope": "keyword.operator.words.tql",
                         "settings": {
                             "foreground": "#ff7abd"
                         }
                     },
-            
                     {
                         "scope": "keyword.operator.characters.tql",
                         "settings": {
                             "foreground": "#ff7abd"
                         }
                     },
-            
                     {
                         "scope": "storage.type.tql",
                         "settings": {
@@ -74,7 +64,6 @@
                             "fontStyle": "italic"
                         }
                     },
-            
                     {
                         "scope": "storage.modifier.tql",
                         "settings": {
@@ -82,21 +71,18 @@
                             "fontStyle": "italic"
                         }
                     },
-            
                     {
                         "scope": "keyword.control.tql",
                         "settings": {
                             "foreground": "#ff7abd"
                         }
                     },
-            
                     {
                         "scope": "keyword.annotations.tql",
                         "settings": {
                             "foreground": "#FFA187"
                         }
                     },
-            
                     {
                         "scope": "support.function.tql",
                         "settings": {
@@ -104,35 +90,30 @@
                             "fontStyle": "italic"
                         }
                     },
-            
                     {
                         "scope": "string.tql",
                         "settings": {
                             "foreground": "#FFE4A7"
                         }
                     },
-            
                     {
                         "scope": "constant.character.escape.tql",
                         "settings": {
                             "foreground": "#FFA187"
                         }
                     },
-            
                     {
                         "scope": "constant.language.tql",
                         "settings": {
                             "foreground": "#FFA187"
                         }
                     },
-            
                     {
                         "scope": "constant.numeric.tql",
                         "settings": {
                             "foreground": "#82b6ff"
                         }
                     },
-            
                     {
                         "scope": "variable.parameter.tql",
                         "settings": {
@@ -140,14 +121,99 @@
                             "fontStyle": "italic"
                         }
                     },
-            
                     {
                         "scope": "invalid.illegal.tql",
                         "settings": {
                             "foreground": "#ff8080"
                         }
                     }
-                ]
+                ],
+                "[*Light*]": {
+                    "textMateRules": [
+                        {
+                            "scope": "keyword.operator.words.tql",
+                            "settings": {
+                                "foreground": "#d4006a"
+                            }
+                        },
+                        {
+                            "scope": "keyword.operator.characters.tql",
+                            "settings": {
+                                "foreground": "#d4006a"
+                            }
+                        },
+                        {
+                            "scope": "storage.type.tql",
+                            "settings": {
+                                "foreground": "#0e8a84",
+                                "fontStyle": "italic"
+                            }
+                        },
+                        {
+                            "scope": "storage.modifier.tql",
+                            "settings": {
+                                "foreground": "#0055c4",
+                                "fontStyle": "italic"
+                            }
+                        },
+                        {
+                            "scope": "keyword.control.tql",
+                            "settings": {
+                                "foreground": "#d4006a"
+                            }
+                        },
+                        {
+                            "scope": "keyword.annotations.tql",
+                            "settings": {
+                                "foreground": "#b35232"
+                            }
+                        },
+                        {
+                            "scope": "support.function.tql",
+                            "settings": {
+                                "foreground": "#d4006a",
+                                "fontStyle": "italic"
+                            }
+                        },
+                        {
+                            "scope": "string.tql",
+                            "settings": {
+                                "foreground": "#c48500"
+                            }
+                        },
+                        {
+                            "scope": "constant.character.escape.tql",
+                            "settings": {
+                                "foreground": "#b35232"
+                            }
+                        },
+                        {
+                            "scope": "constant.language.tql",
+                            "settings": {
+                                "foreground": "#b35232"
+                            }
+                        },
+                        {
+                            "scope": "constant.numeric.tql",
+                            "settings": {
+                                "foreground": "#0055c4"
+                            }
+                        },
+                        {
+                            "scope": "variable.parameter.tql",
+                            "settings": {
+                                "foreground": "#0e8a84",
+                                "fontStyle": "italic"
+                            }
+                        },
+                        {
+                            "scope": "invalid.illegal.tql",
+                            "settings": {
+                                "foreground": "#cc0000"
+                            }
+                        }
+                    ]
+                }
             }
         }
     }
