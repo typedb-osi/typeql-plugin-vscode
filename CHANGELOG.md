@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to the "TypeQL Syntax Highlighter" extension will be documented in this file.
 
+## [v0.4.3]
+### Added
+- add colors for Light themes
+### Changed
+- fix comment pattern and default to user theme for styling
+
 ## [v0.4.1]
 ### Changed
 - added region folding markers support

@@ -2,7 +2,7 @@
     "name": "typeql",
     "displayName": "TypeQL",
     "description": "TypeQL Syntax Highlighter",
-    "version": "0.4.2",
+    "version": "0.4.3",
     "icon": "logo.png",
     "publisher": "typedb",
     "author": {
