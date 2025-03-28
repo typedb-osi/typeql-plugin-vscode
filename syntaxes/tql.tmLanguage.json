@@ -27,7 +27,7 @@
 			"include": "#constant"
 		},
 		{
-			"include": "#variable"
+			"include": "#variables"
 		},
 		{
 			"include": "#comment"
@@ -50,7 +50,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.tql",
-					"match": "\\b(?!.*-.\\s)(define|undefine|match|get|insert|delete|offset|limit|group|sort|asc|desc|sub|abstract|as|iid|type|isa|isa!|sub|sub!|owns|has|plays|relates|value|regex|rule|when|then)(?!-)\\b"
+					"match": "\\b(?!.*-.\\s)(define|undefine|match|get|insert|delete|offset|limit|group|sort|asc|desc|abstract|as|iid|type|isa|isa!|sub|sub!|owns|has|plays|relates|value|regex|rule|when|then)(?!-)\\b"
 				},
 				{
 					"name": "keyword.operator.words.tql",
@@ -58,11 +58,11 @@
 				},
 				{
 					"name": "keyword.operator.characters.tql",
-					"match": ">=|<=|>|<|==|="
+					"match": ">=|<=|>|<|==|=|!="
 				},
 				{
 					"name": "keyword.annotations.tql",
-					"match": "(@key|@unique)\\b"
+					"match": "(@\\w+)\\b"
 				}
 			]
 		},
@@ -117,15 +117,15 @@
 		"variables": {			
 			"patterns": [
 				{
-					"match": "\\$",
+					"match": "\\$\\w+",
 					"captures": {
 						"0": {
-							"name": "variable.dollar.tql"
+							"name": "variable.parameter.tql"
 						}
 					}
 				},
 				{
-					"match": "(-[a-z_\\x{7f}-\\x{ff}][a-z0-9_\\x{7f}-\\x{ff}])+",
+					"match": "(-[a-z_\\x{7f}-\\x{ff}][a-z0-9_\\x{7f}-\\x{ff}]*)+",
 					"name": "invalid.illegal.tql"
 				}
 			]
