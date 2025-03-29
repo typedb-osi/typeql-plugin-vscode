@@ -30,17 +30,39 @@
         "typedb"
     ],
     "contributes": {
-        "languages": [{
-          "id": "tql",
-          "aliases": ["TypeQL", "tql"],
-          "extensions": [".tql"],
-          "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-          "language": "tql",
-          "scopeName": "source.tql",
-          "path": "./syntaxes/tql.tmLanguage.json"
-        }],
+        "languages": [
+            {
+                "id": "tql",
+                "aliases": [
+                    "TypeQL",
+                    "typeql",
+                    "tql"
+                ],
+                "extensions": [
+                    ".tql"
+                ],
+                "configuration": "./language-configuration.json",
+                "icon": { "light": "./logo.png", "dark": "./logo.png" }
+            }
+        ],
+        "grammars": [
+            {
+                "language": "tql",
+                "scopeName": "source.tql",
+                "path": "./syntaxes/tql.tmLanguage.json"
+            },
+            {
+                "path": "./syntaxes/tql-markdown-injection.json",
+                "scopeName": "markdown.typeql.codeblock",
+                "injectTo": ["text.html.markdown"],
+                "embeddedLanguages": {
+                    "meta.embedded.block.typeql": "tql"
+                }
+            }
+        ],
+        "markdown.preview.breaks": true,
+        "markdown.preview.syntaxHighlighting": true,
+        
         "configurationDefaults": {
             "editor.insertSpaces": false,
             "editor.tokenColorCustomizations": {

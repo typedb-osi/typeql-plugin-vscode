@@ -27,7 +27,7 @@
 			"include": "#constant"
 		},
 		{
-			"include": "#variable"
+			"include": "#variables"
 		},
 		{
 			"include": "#comment"
@@ -38,11 +38,11 @@
 			"patterns": [
 				{
 					"name": "storage.type.tql",
-					"match": "\\b(thing|entity|attribute|relation|role)(?!-)\\b"
+					"match": "\\b(entity|attribute|relation|role|struct)(?!-)\\b"
 				},
 				{
 					"name": "storage.modifier.tql",
-					"match": "\\b(string|long|double|boolean|datetime)(?!-)\\b"
+					"match": "\\b(string|double|boolean|datetime|datetime-tz|date|duration|decimal|integer)(?!-)\\b"
 				}
 			]
 		},
@@ -50,19 +50,19 @@
 			"patterns": [
 				{
 					"name": "keyword.control.tql",
-					"match": "\\b(?!.*-.\\s)(define|undefine|match|get|insert|delete|offset|limit|group|sort|asc|desc|sub|abstract|as|iid|type|isa|isa!|sub|sub!|owns|has|plays|relates|value|regex|rule|when|then)(?!-)\\b"
+					"match": "\\b(define|undefine|redefine|match|fetch|insert|put|update|delete|offset|limit|group|sort|select|require|reduce|distinct|asc|desc|abstract|as|iid|type|isa|isa!|sub|sub!|owns|has|plays|relates|value|regex|fun|return|let|in|struct|of|from|first|last|check)(?!-)\\b"
 				},
 				{
 					"name": "keyword.operator.words.tql",
-					"match": "\\b(or|not|like|is|contains)\\b"
+					"match": "\\b(or|not|try|like|is|contains)\\b"
 				},
 				{
 					"name": "keyword.operator.characters.tql",
-					"match": ">=|<=|>|<|==|="
+					"match": ">=|<=|>|<|==|=|!=|\\+|-|\\*|/|\\^|%|\\.\\.|->|\\?"
 				},
 				{
 					"name": "keyword.annotations.tql",
-					"match": "(@key|@unique)\\b"
+					"match": "(@abstract|@cascade|@distinct|@key|@independent|@unique|@card|@range|@regex|@subkey|@values)\\b"
 				}
 			]
 		},
@@ -70,7 +70,7 @@
 			"patterns": [
 				{
 					"name":"support.function.tql",
-					"match":"\\b(count|sum|max|min|mean|median|std)(?!-)\\b"
+					"match":"\\b(count|sum|max|min|mean|median|std|list|abs|ceil|floor|round|length|check|first|last)(?!-)\\b"
 				}
 			]
 		},
@@ -117,16 +117,12 @@
 		"variables": {			
 			"patterns": [
 				{
-					"match": "\\$",
+					"match": "\\$[\\w-]+",
 					"captures": {
 						"0": {
-							"name": "variable.dollar.tql"
+							"name": "variable.parameter.tql"
 						}
 					}
-				},
-				{
-					"match": "(-[a-z_\\x{7f}-\\x{ff}][a-z0-9_\\x{7f}-\\x{ff}])+",
-					"name": "invalid.illegal.tql"
 				}
 			]
 		},
