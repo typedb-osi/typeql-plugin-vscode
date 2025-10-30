@@ -4,8 +4,9 @@ Syntax highlighter for TypeQL
 ![Screenshot](./screenshot.jpg)
 
 ## Installation
-This plugin is published on the [Visual Studio Code Plugin Marketplace](https://marketplace.visualstudio.com/items?itemName=typedb.typeql):
-Visual Studio Code > Programming Languages > TypeQL
+Get this plugin from:
+* [Visual Studio Code Plugin Marketplace](https://marketplace.visualstudio.com/items?itemName=typedb.typeql): Visual Studio Code > Programming Languages > TypeQL
+* [Open VSX Registry](https://open-vsx.org/extension/typedb/typeql)
 
 ## Features
 Highlight:
